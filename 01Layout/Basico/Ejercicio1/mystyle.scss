@@ -1,4 +1,5 @@
 @use "base" as *;
+@use "sass:color";
 
 body {
   margin: 0;
@@ -19,47 +20,52 @@ body {
 
 .box {
   display: flex;
+  width: 70px;
+  height: 70px;
+  align-items: center;
   justify-content: center;
   color: $text-color;
   font-size: $font-size;
   padding: 30px;
+  border: 1px solid black;
+  border-radius: 10%;
 }
 
 .base1-color {
-  background-color: $base-color-1;
+  background-color: $color-base-1;
 }
 
 @for $i from 1 through 4 {
   .darken1-#{$i} {
-    background-color: scale-color($base-color-1, $lightness: -1 * $i * 15%);
+    background-color: color.scale($color-base-1, $lightness: -1 * $i * 15%);
   }
   .lighten1-#{$i} {
-    background-color: scale-color($base-color-1, $lightness: $i * 15%);
+    background-color: color.scale($color-base-1, $lightness: $i * 15%);
   }
 }
 
 .base2-color {
-  background-color: $base-color-2;
+  background-color: $color-base-2;
 }
 
 @for $i from 1 through 4 {
   .darken2-#{$i} {
-    background-color: scale-color($base-color-2, $lightness: -1 * $i * 15%);
+    background-color: color.scale($color-base-2, $lightness: -1 * $i * 15%);
   }
   .lighten2-#{$i} {
-    background-color: scale-color($base-color-2, $lightness: $i * 15%);
+    background-color: color.scale($color-base-2, $lightness: $i * 15%);
   }
 }
 
 .base3-color {
-  background-color: $base-color-3;
+  background-color: $color-base-3;
 }
 
 @for $i from 1 through 4 {
   .darken3-#{$i} {
-    background-color: scale-color($base-color-3, $lightness: -1 * $i * 15%);
+    background-color: color.scale($color-base-3, $lightness: -1 * $i * 15%);
   }
   .lighten3-#{$i} {
-    background-color: scale-color($base-color-3, $lightness: $i * 15%);
+    background-color: color.scale($color-base-3, $lightness: $i * 15%);
   }
 }
