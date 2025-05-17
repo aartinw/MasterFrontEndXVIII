@@ -1,0 +1,60 @@
+@use "basea" as *;
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, 120px);
+  grid-template-rows: repeat(3, 90px);
+  gap: 1px;
+  font-size: $font-size;
+  padding: 10px;
+  font-family: $font-family;
+}
+
+.box-base {
+  background-color: $background-color-base;
+  border: $border-color;
+}
+
+.box-important {
+  background-color: $background-color-important;
+  border: $border-color;
+}
+.box-warning {
+  background-color: $background-color-warning;
+  border: $border-color;
+}
+p {
+  margin-left: 20px;
+}
+
+.fuente-principal {
+  margin: 10px 0px 10px 20px;
+  font-family: $font-family-principal;
+  font-size: $font-size;
+}
+
+.fuente-secondary {
+  margin: 10px 0px 10px 20px;
+  font-family: $font-family-secondary;
+  font-size: $font-size;
+}
+
+.container-shadow {
+  display: grid;
+  grid-template-columns: repeat(1, 120px);
+  grid-template-rows: repeat(1, 80px);
+  font-size: $font-size;
+  font-family: $font-family;
+  border: $border-color;
+  margin-left: 10px;
+  box-shadow: $shadow-box;
+  align-items: center;
+}
