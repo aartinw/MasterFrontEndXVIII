@@ -21,6 +21,7 @@ a {
 
 .item:hover {
   background-color: rgb(182, 139, 184);
+  color: black;
   cursor: pointer;
 }
 
