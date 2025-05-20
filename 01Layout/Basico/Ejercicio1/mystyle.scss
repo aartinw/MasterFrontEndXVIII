@@ -31,41 +31,26 @@ body {
   border-radius: 10%;
 }
 
-.base1-color {
-  background-color: $color-base-1;
-}
-
-@for $i from 1 through 4 {
-  .darken1-#{$i} {
-    background-color: color.scale($color-base-1, $lightness: -1 * $i * 15%);
+@mixin backgroundColor($color) {
+  .base-color {
+    background-color: $color;
   }
-  .lighten1-#{$i} {
-    background-color: color.scale($color-base-1, $lightness: $i * 15%);
-  }
-}
-
-.base2-color {
-  background-color: $color-base-2;
-}
-
-@for $i from 1 through 4 {
-  .darken2-#{$i} {
-    background-color: color.scale($color-base-2, $lightness: -1 * $i * 15%);
-  }
-  .lighten2-#{$i} {
-    background-color: color.scale($color-base-2, $lightness: $i * 15%);
+  @for $i from 1 through 4 {
+    .darken-#{$i} {
+      background-color: color.scale($color, $lightness: -1 * $i * 15%);
+    }
+    .lighten-#{$i} {
+      background-color: color.scale($color, $lightness: $i * 15%);
+    }
   }
 }
-
-.base3-color {
-  background-color: $color-base-3;
+.container-1 {
+  @include backgroundColor($color-base-1);
 }
 
-@for $i from 1 through 4 {
-  .darken3-#{$i} {
-    background-color: color.scale($color-base-3, $lightness: -1 * $i * 15%);
-  }
-  .lighten3-#{$i} {
-    background-color: color.scale($color-base-3, $lightness: $i * 15%);
-  }
+.container-2 {
+  @include backgroundColor($color-base-2);
+}
+.container-3 {
+  @include backgroundColor($color-base-3);
 }
