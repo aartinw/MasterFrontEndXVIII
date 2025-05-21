@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,700;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #141414;
+  font-family: Jost;
+  color: white;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo img {
+  margin: 20px 5px 30px 30px;
+}
+
+.platform-title {
+  font-size: 20px;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  margin: 20px 40px 20px 0px;
+}
+
+.header-buttons div {
+  padding: 20px;
+  border-radius: 10%;
+}
+
+.header-buttons :hover {
+  background-color: white;
+  color: #141414;
+}
+
+#top-text::before {
+  font-weight: 600;
+  content: "5";
+}
+
+.section-title {
+  font-size: 20px;
+  margin: 50px 0px 5px 30px;
+}
+
+.top {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-evenly;
+  min-width: 225px;
+}
+
+/* .top-item {
+  min-width: 225px;
+} */
+
+.first {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.item :hover {
+  scale: 1.2;
+}
+
+.second {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@media screen and (max-width: 1280px) {
+  #top-text::before {
+    content: "3";
+  }
+  .platform-title {
+    display: none;
+  }
+  .top-item:nth-child(-n + 2) {
+    display: none;
+  }
+}
+@media screen and (max-width: 400px) {
+  #top-text::before {
+    content: "3";
+  }
+  .section-title {
+    font-size: 35px;
+  }
+  .platform-title {
+    display: none;
+  }
+  .top-item:nth-child(-n + 2) {
+    display: none;
+  }
+  .top {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+  }
+}
