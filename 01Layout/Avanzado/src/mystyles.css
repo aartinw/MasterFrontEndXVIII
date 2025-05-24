@@ -61,26 +61,26 @@ header {
   justify-content: space-evenly;
   min-width: 225px;
 }
-
-/* .top-item {
-  min-width: 225px;
-} */
-
-.first {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+.top.first.second img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
-.item :hover {
-  scale: 1.2;
-}
-
+.first,
 .second {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-content: center;
+  align-items: center;
+  gap: 10px;
+  min-width: 250px;
+}
+
+.item :hover {
+  scale: 1.2;
 }
 
 @media screen and (max-width: 1280px) {
@@ -90,21 +90,32 @@ header {
   .platform-title {
     display: none;
   }
-  .top-item:nth-child(-n + 2) {
+  .top-item:nth-child(1),
+  .top-item:nth-child(2) {
     display: none;
   }
+  .first.second {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
 }
-@media screen and (max-width: 400px) {
+
+@media screen and ((min-width: 601px) and (max-width:800px)) {
   #top-text::before {
     content: "3";
   }
   .section-title {
-    font-size: 35px;
+    font-size: 25px;
+    padding: 10px;
   }
   .platform-title {
     display: none;
   }
-  .top-item:nth-child(-n + 2) {
+  .top-item:nth-child(1),
+  .top-item:nth-child(2) {
     display: none;
   }
   .top {
@@ -112,5 +123,42 @@ header {
     flex-direction: column-reverse;
     justify-content: center;
     align-content: center;
+    align-items: center;
+  }
+  .first.second > img {
+    padding: 10px;
+  }
+  .first.second {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 600px) {
+  #top-text::before {
+    content: "3";
+  }
+  .section-title {
+    font-size: 25px;
+    padding: 10px;
+  }
+  .platform-title {
+    display: none;
+  }
+  .top-item:nth-child(1),
+  .top-item:nth-child(2) {
+    display: none;
+  }
+  .top {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
+  .first.second > img {
+    padding: 10px;
   }
 }
