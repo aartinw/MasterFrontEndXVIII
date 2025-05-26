@@ -23,16 +23,18 @@ header {
 
 .header-logo img {
   margin: 20px 5px 30px 30px;
+  width: 100%;
 }
 
 .platform-title {
-  font-size: 20px;
+  display: none;
 }
 
 .header-buttons {
   display: flex;
   align-items: center;
-  margin: 20px 40px 20px 0px;
+  margin: 10px;
+  gap: 10px;
 }
 
 .header-buttons div {
@@ -47,23 +49,28 @@ header {
 
 #top-text::before {
   font-weight: 600;
-  content: "5";
+  content: "3";
 }
-
+.top-item:nth-child(1),
+.top-item:nth-child(2) {
+  display: none;
+}
 .section-title {
-  font-size: 20px;
+  font-size: 25px;
   margin: 50px 0px 5px 30px;
 }
 
 .top {
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-evenly;
-  min-width: 225px;
+  flex-direction: column-reverse;
+  align-items: center;
 }
-.top.first.second img {
-  display: block;
+
+.first img,
+.second img {
+  display: flex;
   width: 100%;
+  align-items: center;
   height: auto;
   object-fit: cover;
 }
@@ -73,17 +80,60 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  align-content: center;
   align-items: center;
   gap: 10px;
-  min-width: 250px;
+  padding: 20px;
 }
 
 .item :hover {
-  scale: 1.2;
+  transform: scale(1.2);
+  transition: transform 0.3s ease;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (min-width: 850px) {
+  .platform-title {
+    display: block;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  .section-title {
+    font-size: 22px;
+    margin: 50px 0px 5px 30px;
+  }
+
+  .top {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .top-item:nth-child(1),
+  .top-item:nth-child(2) {
+    display: block;
+  }
+
+  .first,
+  .second {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: row;
+  }
+
+  #top-text::before {
+    font-weight: 600;
+    content: "5";
+  }
+  .top-item img,
+  .item img {
+    width: 100%;
+    max-width: 225px;
+    height: auto;
+    object-fit: cover;
+  }
+}
+
+/* @media screen and (max-width: 1280px) {
   #top-text::before {
     content: "3";
   }
@@ -135,8 +185,8 @@ header {
     align-content: center;
     align-items: center;
   }
-}
-@media screen and (max-width: 600px) {
+} */
+/* @media screen and (max-width: 600px) {
   #top-text::before {
     content: "3";
   }
@@ -161,4 +211,4 @@ header {
   .first.second > img {
     padding: 10px;
   }
-}
+} */
