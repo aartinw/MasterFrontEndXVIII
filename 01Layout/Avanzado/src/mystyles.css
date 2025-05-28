@@ -10,10 +10,15 @@ body {
   font-family: Jost;
   color: white;
 }
-
+main {
+  max-width: 1024px;
+  margin: 0 auto;
+}
 header {
   display: flex;
   justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
 }
 
 .header-logo {
@@ -90,6 +95,10 @@ header {
   transition: transform 0.3s ease;
 }
 
+.item {
+  width: 100%;
+}
+
 @media screen and (min-width: 850px) {
   .platform-title {
     display: flex;
@@ -108,11 +117,6 @@ header {
     justify-content: space-evenly;
   }
 
-  .top-item:nth-child(1),
-  .top-item:nth-child(2) {
-    display: block;
-  }
-
   .first,
   .second {
     display: flex;
@@ -121,24 +125,35 @@ header {
     flex-direction: row;
   }
 
-  #top-text::before {
-    font-weight: 600;
-    content: "5";
-  }
   .top-item img {
     width: 100%;
-    max-width: 250px;
+    min-width: 250px;
     height: auto;
     object-fit: cover;
   }
   .item img {
     width: 100%;
-    max-width: 225px;
+    min-width: 225px;
     height: auto;
     object-fit: cover;
   }
+  .item {
+    flex: 1;
+  }
 }
-
+@media screen and (min-width: 1024px) {
+  .top-item:nth-child(1),
+  .top-item:nth-child(2) {
+    display: block;
+  }
+  #top-text::before {
+    font-weight: 600;
+    content: "5";
+  }
+  .top-item img {
+    min-width: 200px;
+  }
+}
 /* @media screen and (max-width: 1280px) {
   #top-text::before {
     content: "3";
