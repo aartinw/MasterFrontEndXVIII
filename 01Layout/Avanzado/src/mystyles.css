@@ -17,6 +17,9 @@ main {
 header {
   display: flex;
   justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: #141414;
   max-width: 1024px;
   margin: 0 auto;
 }
