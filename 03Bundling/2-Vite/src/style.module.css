@@ -1,10 +1,7 @@
-$background-color: white;
-$text-color: pink;
-
 body {
   margin: 0;
   min-height: 100vh;
-  background: $background-color;
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,20 +9,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-body h3 {
-  color: $text-color;
+h1 {
+  color: pink;
   font-size: 3rem;
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 4px;
   padding: 15px 30px;
-  border: 3px solid $text-color;
+  border: 3px solid pink;
   border-radius: 15px;
   background: white;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-img {
-  width: 400px;
-  margin-top: 30px;
 }
