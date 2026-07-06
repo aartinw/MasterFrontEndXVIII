@@ -1,6 +1,5 @@
 import { defineConfig } from "rolldown-vite";
 import { checker } from "vite-plugin-checker";
-import react from "@vitejs/plugin-react-oxc";
 import tailwindcss from "@tailwindcss/vite";
 import { analyzer } from "vite-bundle-analyzer";
 
@@ -10,5 +9,5 @@ export default defineConfig({
       polyfill: false,
     },
   },
-  plugins: [checker({ typescript: true }), tailwindcss(), react(), analyzer()],
+  plugins: [checker({ typescript: true }), tailwindcss(), analyzer()],
 });
